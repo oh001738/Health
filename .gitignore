@@ -1,8 +1,5 @@
 <<<<<<< HEAD
 config.php
-config.php
-config.php
-delete_session.php
 =======
 # Windows image file caches
 Thumbs.db
@@ -49,3 +46,4 @@ Temporary Items
 .apdisk
 config.php
 >>>>>>> origin/master
+config.php
