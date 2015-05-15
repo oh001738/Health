@@ -104,15 +104,15 @@ header_print(true);   //載入header檔
 				
 				$kcal_spend = 0;
 				}
-				echo "<div class=\"col-md-12 col-sm-12\">\n"; 
+				echo "<div class=\"col-md-12\">\n"; 
 				echo "<div class=\"media\">\n"; 
 				echo "<a href=\"javascript:view_food(" . $row['ch_id'] . ",1)\" class=\"pull-left\">\n"; 
-				echo "<img src=\"" . IMG_URL . "/" . $row['ch_image'] . "\" class=\"media-object\" alt=\"Food's Image\" width = \"80\" height = \"80\">\n"; 
+				echo "<img src=\"" . IMG_URL . "/" . $row['ch_image'] . "\" class=\"media-object img-rounded\" alt=\"Food's Image\" width = \"80\" height = \"80\">\n"; 
 				echo "</a>\n"; 
 				echo "<div class=\"media-body\">\n"; 
 				echo "<h4 class=\"media-heading text-left\"><a href=\"javascript:view_food(" . $row['ch_id'] . ",1)\">".$row['ch_name']." </a><small>熱量:".$row['ch_k']."</small></h4>\n"; 
 				echo "<div class=\"progress\">\n"; //占用熱量圖表
-				echo "<div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"".round($kcal_spend)."\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ".round($kcal_spend)."%;\">".round($kcal_spend)."%</div>\n"; //占用熱量圖表
+				echo "<div class=\"progress-bar progress-bar-warning progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"".round($kcal_spend)."\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ".round($kcal_spend)."%;\">".round($kcal_spend)."%</div>\n"; //占用熱量圖表
 				echo "</div>"; //占用熱量圖表				
 				echo "<table class=\"table table-condensed\">\n"; 
 				echo "<tr>\n"; 
@@ -135,7 +135,7 @@ header_print(true);   //載入header檔
 				echo "</div>\n"; 
 				echo "</div>\n"; 
 				echo "</div>\n";
-				echo "<div class=\"col-xs-12\"><hr></div>\n";
+				echo "<div class=\"col-md-12\"><hr></div>\n";
 				
 			$i++;
 			}

@@ -1,6 +1,6 @@
 <?PHP
 include_once 'config.php';
-header_print(true);   //載入header test檔
+header_print(true);   //載入header檔
 ?>
 
 <body>
