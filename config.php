@@ -5,17 +5,17 @@ ob_start();
 @session_start();
 
 define('USER_SESSIONS',	session_id());				  //設定使用者SESSION
-define("DB_HOST" , "127.0.0.1:3306");					  //定義資料庫連線位置
+define("DB_HOST" , "127.8.247.130:3306");					  //定義資料庫連線位置
 define("DB_NAME" , "food");							  //定義資料庫名稱
-define("DB_USER" , "root");						  //定義資料庫使用者
-define("DB_PASS" , "");					  //定義資料庫使用者密碼
-define("ROOT_URL" ,	"http://10.110.24.168:8080/Health");	  //網站網址最後請勿加斜線
-define("ROOT_PATH" , "D:/xampp/htdocs/Health");//網站根目錄最後請勿加斜線
+define("DB_USER" , "admindAmvbVX");						  //定義資料庫使用者
+define("DB_PASS" , "fLY2pbRZ_dMb");					  //定義資料庫使用者密碼
+define("ROOT_URL" ,	"http://i.wuchipc.com/Health");	  //網站網址最後請勿加斜線
+define("ROOT_PATH" , "/var/lib/openshift/550fcd7d4382ec578c000049/app-root/runtime/repo/Health");//網站根目錄最後請勿加斜線
 define("IMG_URL" , ROOT_URL	. "/img");				  //網站圖片目錄最後請勿加斜線
 define("IMG_PATH" ,	ROOT_PATH .	"/img");			  //網站圖片根目錄最後請勿加斜線
 define("WEB_CHARSET" , "UTF-8");					  //網站編碼
 define("WEB_TITLE" , "Diet Record System");					  //網站標題
-define("PAGE_NUM" ,	"7");							  //每頁顯示數量
+define("PAGE_NUM" ,	"20");							  //每頁顯示數量
 define("COOKIE_TIME" , "21600");					  //設定網站COOKIE存活時間，單位秒
 
 include_once ROOT_PATH . "/include/functions.php";	  //載入函式庫
