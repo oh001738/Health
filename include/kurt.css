@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+  background: #F4FDE5 url('bg.jpg') top center no-repeat fixed;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+a:link {
+	text-decoration: none
+}
+a:visited {
+	text-decoration: none
+}
+a:active {
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none
+}
+
+.title
+{
+	font-family: verdana, arial, sans-serif;
+	font-size: 15px;
+	font-weight:700;
+	color: #FF6600;
+	padding:4px;
+	border: 1px solid #AAE5A4;
+	background-color:#F4FDE5;
+}
+
+.title2{
+	font-family: verdana, arial, sans-serif;
+	font-size: 11pt;
+	color: #666666;
+}
+
+.title3{
+	font-family: verdana, arial, sans-serif;
+	font-size: 17px;
+	font-weight:700;
+	color: #FF6600;
+}
+
+.header_table
+{
+	border-color:#FFFFFF;
+	border-collapse:collapse;
+	background-color:#FFFFFF;
+	width:970px;
+}
+
+.header_menu
+{
+	font-size:15px;
+	font-weight:700;
+	color:#FFFFFF;
+}
+
+.leftmenu{
+	width:18%;
+}
+ .rightmenu{
+	width:19%;
+}
+
+.text15px{
+  font-size:15px;
+  color:#323232;
+}
+
+.text13px{
+  font-size:13px;
+  color:#323232;
+}
+
+.text13pxbold{
+  font-size:13px;
+  color:#323232;
+  font-weight:700;
+}
+
+.menu_link:link {
+	color:#FFFFFF;
+	text-decoration: none
+}
+.menu_link:visited {
+	color:#FFFFFF;
+	text-decoration: none
+}
+.menu_link:active {
+	color:#FFFFFF;
+	text-decoration: none
+}
+.menu_link:hover {
+	color:#FFFFFF;
+	text-decoration: none
+}
+
+.fast_link
+{
+	padding-top:10px;
+	padding-left:10px;
+}
+
+.redvalue{
+	color:#FF0000;
+	font-size:15px;
+}
+
+.light_1{
+	color:#DC0300;
+	font-size:30px;
+}
+
+.light_2{
+	color:#F7FA00;
+	font-size:30px;
+}
+
+.light_3{
+	color:#6BDC00;
+	font-size:30px;
+}

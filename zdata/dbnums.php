@@ -1,0 +1,13 @@
+<?php $dbnum[0]=1;
+$dbnum[1]=2;
+$dbnum[2]=3;
+$dbnum[3]=4;
+$dbnum[4]=5;
+$dbnum[5]=6;
+$dbnum[6]=7;
+$dbnum[7]=8;
+$dbnum[8]=9;
+$dbnum[9]=10;
+$dbnum[10]=11;
+$dbnum[11]=12;
+$dbnum[12]=13; ?>

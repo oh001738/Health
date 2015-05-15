@@ -1,0 +1,151 @@
+﻿<title>新手上路</title>
+<style type="text/css">
+@import url(menuTab/menuTab.css);
+</style>
+<script type="text/javascript">
+function clearLinkDot() {
+	var i, a, main;
+	for(i=0; (a = document.getElementsByTagName("a")[i]); i++) {
+		if(a.getAttribute("onFocus")==null) {
+			a.setAttribute("onFocus","this.blur();");
+		}else{
+			a.setAttribute("onFocus",a.getAttribute("onFocus")+";this.blur();");
+		}
+		a.setAttribute("hideFocus","hidefocus");
+	}
+}
+
+function loadTab(obj,n){
+	var layer;
+	eval('layer=\'S'+n+'\'');
+
+	//將 Tab 標籤樣式設成 Blur 型態
+	var tabsF=document.getElementById('tabsF').getElementsByTagName('li');
+	for (var i=0;i<tabsF.length;i++){
+		tabsF[i].setAttribute('id',null);
+		eval('document.getElementById(\'S'+(i+1)+'\').style.display=\'none\'')
+	}
+
+	//變更分頁標題樣式
+	obj.parentNode.setAttribute('id','current');
+	document.getElementById(layer).style.display='inline';
+}
+</script>
+</head>
+<body onLoad="clearLinkDot();">
+<!------------------------------------------------------------------------------------------------------------->
+<div id="tabsF">
+	<ul>
+        <li id="current"><a href="javascript://" onClick="loadTab(this,1);"><span>頁面導覽</span></a></li>
+        <li ><a href="javascript://" onClick="loadTab(this,2);"><span>註冊會員</span></a></li>
+		<li><a href="javascript://" onClick="loadTab(this,3);"><span>個人資料修改</span></a></li>
+		<li><a href="javascript://" onClick="loadTab(this,4);"><span>配餐</span></a></li>
+		<li><a href="javascript://" onClick="loadTab(this,5);"><span>飲食日誌</span></a></li>
+	</ul>
+</div>
+<!------------------------------------------------------------------------------------------------------------->
+<div id="tabsC">
+<!------------------------------------------------------------------------------------------------------------->
+	<div id="S1" style="display:inline;">
+    	<blockquote>          
+    	  <br><p><b>衛教系統首頁</b></p>
+    	  <blockquote>
+    	    <p><img src="img/imgintro/mainpage.JPG" width="100%"></p>
+  	    </blockquote>
+      </blockquote>
+    </div>
+<!------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------->
+	<div id="S2" style="display:none;">
+	<blockquote>
+	  <br><p><b>註冊會員</b></p>
+	  <blockquote>
+    	<p>首頁點選註冊會員來使用更多功能<br>
+	      <img src="img/imgintro/regi01.JPG" width="193" height="76" border="1"></p>
+    	<p>輸入基本資料<br>
+	      <img src="img/imgintro/regi02.JPG" width="462" height="239" border="1"></p>
+    	<p><br>
+	      <img src="img/imgintro/regi03.JPG" width="656" height="292" border="1"> </p>
+	    </p>
+	    <p> 輸入運動情形      <br>
+    	  <img src="img/imgintro/regi04.JPG" width="724" height="346" border="1"></p>
+	    <p> 輸入健檢數值 <br>
+	      <img src="img/imgintro/regi05.JPG" width="656" height="763" border="1"></p>
+	    <p> 註冊完成，系統會計算腎絲球過濾率(GFR)<br>
+	      <img src="img/imgintro/regi06.JPG" width="701" height="312" border="1"></p>
+	  </blockquote>    
+	  </blockquote>
+  </div>
+<!------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------->
+  <div id="S3" style="display:none;">		
+	<blockquote>
+		  <br><p><b>個人資料修改</b></p>
+		  <blockquote>
+		    <p>於首頁右上方可登入會員<br>
+            <img src="img/imgintro/login01.JPG" border="1"></p></p>
+		    <p>登入畫面<br>
+            <img src="img/imgintro/login02.JPG" border="1"></p></p>
+		    <p>點選登出左方的名字可檢視個人資料及最近一次更新的健檢資料<br>
+		    <img src="img/imgintro/personal01.JPG" border="1"></p></p>
+            <p>若要更改密碼或是更新健檢值，可點修改資料來進行更新<br>
+            <img src="img/imgintro/personaledit.JPG" border="1"></p></p>
+      </blockquote>            
+    </blockquote>
+  </div>
+<!------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------->
+	<div id="S4" style="display:none;">
+	  <blockquote>
+      	<br><p><b>配餐</b></p>
+        <blockquote>
+       	  <p>若未登入會員，則須輸入基本健檢資料
+       	  <p>登入後點選配餐<br>
+          <img src="img/imgintro/orderm01.JPG" border="1" width="100%" height="803"></p>
+       	  <p>點選餐別並選擇該餐在一天內所佔的份量(依個人喜好調整)<br>
+       	    出現各大食物分類，直接點擊會進入餐點選擇<br>
+          <img src="img/imgintro/orderm02.JPG" border="1"></p>
+          <p>選取欲食用的餐點或是已食用過後的食物(點選取系統便會做紀錄)<br>
+          <img src="img/imgintro/orderm03.JPG" border="1"></p>
+       	  <p>直接點選食物圖片會顯示該食物的營養素<br>
+          <img src="img/imgintro/orderm04.JPG" border="1" ></p>
+          <p>點選完畢可點查詢餐盤或是直接點左邊的餐別可檢視該天所食用的餐點<br>
+       	  <img src="img/imgintro/orderm05.JPG" border="1" width="80%"></p>
+          <p>若欲加選其他食物，點選左邊的食物分類來加選其他食物<br>
+       	  <img src="img/imgintro/orderm06.JPG" border="1"></p>
+          <p>如果在其他頁面可直接點上面的配餐直接點今日配餐紀錄的餐別來新增食物
+       	  <img src="img/imgintro/orderm07.JPG" border="1" ></p>
+          <p>點選完畢按確認來記錄餐點，餐點確認後不可再新增食物<br>
+          <img src="img/imgintro/orderm08.JPG" border="1" ></p>
+        </blockquote>
+      </blockquote>
+	</div>
+<!------------------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------------------------------------------------------------------------->
+	<div id="S5" style="display:none;">
+		<blockquote>
+			<br><p><b>飲食日誌</b></p>
+            <blockquote>
+            	<p>登入會員後，右邊一日所需會依據個人資料內的數據來去計算該會員的理想體重與一日所需的熱量，餐盤部分會紀錄一天當中所食用食物的熱量，並顯示該日還剩多少熱量可攝取<br>
+                <p>點選食物的方式如配餐所示，會員能享有每日餐點紀錄的功能<br>       
+        		<img src="img/imgintro/day01.JPG" border="1" width="100%"></p>
+                <p>右邊為該餐所需熱量與份量以及所選食物的熱量計算<br>
+                <img src="img/imgintro/day02.JPG" border="1" width="100%"></p>
+                <p>下圖左邊記錄今日的配餐，配餐紀錄為已確認的兩餐目前編輯的餐別尚未確認，仍可再新增與刪除食物
+右邊計算該餐所需的熱量以及一日三餐所需的熱量<br>
+                <img src="img/imgintro/day03.JPG" border="1" width="100%"></p>
+                <p>點選上方的飲食日誌，顯示每日的配餐情形<br>
+                <img src="img/imgintro/day04.JPG" border="1" width="100%"></p>
+                 <p>點選瀏覽可察看所有餐點記錄情形<br>
+                <img src="img/imgintro/day05.JPG" border="1" width="100%"></p> 
+            </blockquote>
+        <blockquote>
+  </div>
+<!------------------------------------------------------------------------------------------------------------->
+</div>
+</body>
+</html>

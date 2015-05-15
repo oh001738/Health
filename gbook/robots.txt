@@ -1,0 +1,14 @@
+
+User-agent: *
+
+Disallow: /img/
+Disallow: /tpl/
+Disallow: /zdata/
+Disallow: /ckimg.php
+Disallow: /myclass.php
+Disallow: /updatelog.txt
+Disallow: /zaboutme.php
+Disallow: /zadmin.php
+Disallow: /zcom.js
+Disallow: /znewpo.php
+Disallow: /ztype.php

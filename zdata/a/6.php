@@ -1,0 +1,1 @@
+<?php $zponame='111111'; $zpoemail='2222'; $zpowebsite=''; $zpotext='ikkm'; $zporetext='0.0'; $zpotime='2012-7-18 11:04:46'; $zpoip='140.128.99.12'; ?>

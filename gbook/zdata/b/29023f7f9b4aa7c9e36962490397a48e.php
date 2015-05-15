@@ -1,0 +1,1 @@
+<?php $sionadmin='YES'; ?>

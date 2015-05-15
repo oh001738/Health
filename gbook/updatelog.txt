@@ -1,0 +1,139 @@
+﻿.
+
+安裝及使用說明：
+
+1.確認空間可執行 php 程序，只需可跑php的空間，不用mysql。
+
+2.打開 index.php 設置管理員，登入帳號及登入密碼 (重要，避免留言被胡亂改) 。
+
+3.防止一些人胡亂灌廣告，$showswitch = 0; 可設成 $showswitch = 1; ，審核後才公開留言。
+
+程式採用 utf-8萬國碼 編寫，請使用 Notepad++ 多國語修改，utf-8 檔首無BOM，不然會造成不明錯誤，
+詳情請參考下述任一分流連結：
+http://zfree.yi.org/forum.php?mod=viewthread&tid=5082
+http://zfly9.blogspot.com/2012/01/php-ver-13.html
+http://zp2p.blog124.fc2.com/blog-entry-182.html
+
+4.使用FTP上傳至空間後，zdata目錄含裡面所有文件及目錄全設 777 ，如下文件及目錄：
+
+zdata
+zdata/a/
+zdata/b/
+zdata/dbnums.php
+zdata/tplnums.php
+zdata/usernums.php
+
+5.上述2件事ok後， http://您的留言板對應網址/index.php
+
+6.點最下方 power by zmarkchang ，查看有無函數被禁
+
+7.測試留言及管理，收工。
+
+.
+
+------------------------------------
+
+免費空間測試：
+
+lycos 系列，也就是 multimania 空間，這空間時好時壞，常常出現沒有容量，無法寫入，不建議使用。
+
+vistapanel，簡稱 VP 空間，流量算很大了，也是目前主流的免空，推薦找個無廣告的架設。
+
+另二個主流免空， youhosting分銷系列 及 kilu.de分銷系列 ，也十分推薦。
+
+000webhost.com 及 host1free.com 也算是ok。
+
+http://taiwan101.qc.to/b/forum.php?mod=viewthread&tid=265
+http://taiwan101.t28.net/b/forum.php?mod=viewthread&tid=265
+http://zfree.yi.org/forum.php?mod=viewthread&tid=265
+
+------------------------------------
+
+更新記錄：
+
+2011年11月15日：
+1.找了一個黑色簡單風格，之前打算自已用，但美工不行而且看了不順眼，
+  還是用別人的 = = ，打算用這個黑色風格做這個留言版第一個風格。
+
+2011年11月16日：
+1.今天大約把發表留言及顯示留言部份用好了。
+2.還有用了http和img自動解析這2個實用性滿高的，方便發貼，
+  用了好久，正則試了半天才用出來，其它bbcode代碼就不想用了，不實用。
+  
+2011年11月17日：
+1.最大留言數限制500筆(可調整)，用好了，一般500筆應該就十分夠用，
+  這是放在免空，無管理或忘了管理，才不會被灌暴。
+  
+2011年11月18日：
+1.管理的登入用好，還有刪貼部份也完成
+
+2011年11月21日：
+1.管理的登出用好，回覆也用好
+2.加了zaboutme.php，檢查php函數及說明，免得在頁面加下加一堆字，看了很雜。
+3.重新調整代碼，目前顯示部份ztype.php ok
+
+2011年11月22日：
+1.調整代碼，znewpo.php，zadmin.php，zaboutme.php ok
+2.將設定值用一個config.php，這樣獨立的ckimg.php才能載入相關檔案路徑
+
+2011年11月23日：
+1.取消config.php，想想沒必要，還是取消掉，這樣如果有5個模板，可以別分使用index~index4.php方式切換。
+2.調整好f02模板，淺藍風格
+
+2011年11月24日：
+1.調整好f03模板
+
+2011年11月25日：
+1.調整好f04模板，要用f05時 = =，結果那模板是xhtml+xml太過麻煩，換掉。
+2.又找了2個為f05、f06也調整好。
+3.修正ckimg.php因之前換變數名，造成沒session記錄，還有for迴圈刪超時修正。
+4.用了風格輪流更換的功能，目前6個模板，每24小時更換下一個模板。
+
+2011年11月26日：
+1.總算把審核留言功能用好 ^^ ，打開 和 關閉
+2.用了一個簡單的ico，最近瀏覽器都會顯示ico，用一下比較好。
+3.ico副檔名改為png，因為有的空間限制副檔，會造成跳廣告頁...，改png並不影響ico顯示
+4.用了gzip功能，並在index.php?mod=zaboutme加入gzip檢測站及使用說明，因為有的空間已經啟用就不用開，
+  不然壓2次gzip沒意義，也有可能造成空白頁。
+5.管理頁面加入htm及javascript轉跳方式，好像是之前一個日本空間用header('Location: index.php')會有問題。
+  如果無法正常轉跳，打開 index.php 將 $pagejump 改 1 或 2 方式轉跳。
+6.加入ip記錄，原本是不打算用，想想還是用一下，進入管理頁面可看到留言者ip，順便用了谷歌雅虎百度搜索超連結，方便查詢。
+7.znewpo.php及znewpo.htm調整了一下代碼，修正錯誤顯示部份抓取變數。
+
+原本打算隨便用個簡單易用的php文件型留言板就好，沒想到愈來愈肥= =，功能沒幾個，但已經好幾百行了...呼，
+用了IE8 、 Firefox8.0 、 Google Chrome15 、 Opera11.52 測試模板css，大致上還行，也可順便更新留言板。
+
+2011年11月28日：
+1.在zaboutme.php加入安全模式檢查，在安全模式下，可能會造成文件無法寫入
+
+最近電腦怪怪的，重灌後裝wampserver，php 5.3.8版，跑一下 eregi_replace 報錯，後查了一下在php 5.3 版被廢除 = =
+
+2.用preg_replace取代eregi_replace = =，死正則，真難搞...最後搞定。
+3.隨便找了3個ip來源查詢站取代用谷歌雅虎百度搜索
+4.修正ztype.php一個顯示bug
+5.wampserver 顯示 變數無初始值錯誤，也全補上
+6.版本變更為 ver 1.2
+
+2011年11月30日，ver 1.3：
+1.znewpo.php在錯誤時，不應該加入url及img的 code，之前調整代碼時，用錯變數。
+2.增加一個留言板站，及hinet載點
+
+2012年1月27日，ver 1.3p2：
+1.論壇更新dz x2，六個模板內的zaboutme.htm討論網址變更
+
+2012年2月13日，ver 1.3p3：
+1.調整六個模板內的zaboutme.htm部份網址，及updatelog.txt安裝說明加入連結。
+
+===========================
+1.解壓後，打開index.php修改管理員帳密，不然被人胡亂搞，那就不妙了。
+2.所有文件及目錄，上傳至空間後，zdata含裡面全設 777
+3.瀏覽器http://你留言板網址/ ， 點下方 power by zmarkchang ，查看有沒有禁函數，
+發貼及管理測試一下，完成，十分簡單。
+4. Gzip因有的空間已經使用壓縮模組開啟，所以須檢測一下，如果未開啟gzip，
+可修改index.php內的gzipswitch參數，不使用gzip也行，沒幾行代碼沒啥影響，
+有廣告的免空最好不要開gzip。
+
+
+
+
+.
