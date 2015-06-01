@@ -150,7 +150,7 @@ function check()
 
 <table border = '1' cellpadding = '0' cellspacing = '0' width = '760' class = 'header_table'>
 <tr>
-	<td><?PHP include_once ROOT_PATH . '/menubar.php';?></td>
+	<td><?PHP include_once ROOT_PATH . '/menubar_reg.php';?></td>
 </tr>
 <tr>
 	<td>

@@ -1,26 +1,8 @@
 <?PHP
 include_once 'config.php';
-
-header_print(true);   //載入header檔
+header_print(true);
 ?>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--
-a:link {
-	color: #666666;
-}
-a:visited {
-	color: #666666;
-}
-a:hover {
-	color: #666666;
-}
-a:active {
-	color: #666666;
-}
-.style4 {color: #FF0000}
--->
-</style><body>
+<body>
 
 <table border = '1' cellpadding = '0' cellspacing = '0' class = 'header_table'>
 <tr>

@@ -1,10 +1,10 @@
-//åˆªé™¤å­—ä¸²å‰å¾Œç©ºç™½å­—å…ƒ
+//§R°£¦r¦ê«e«áªÅ¥Õ¦r¤¸
 function trim(str)
 {
 	return str.replace(/^\s+|\s+$/g, "");
 }
 
-//åˆ¤æ–·æ˜¯å¦ç‚ºæ•¸å­—
+//§PÂ_¬O§_¬°¼Æ¦r
 function cknum(value)
 {
 	var NumChr = "0123456789";
@@ -19,7 +19,7 @@ function cknum(value)
 }
 
 
-//åˆ¤æ–·æ˜¯å¦ç‚ºæ•¸å­—æˆ–å°æ•¸é»
+//§PÂ_¬O§_¬°¼Æ¦r©Î¤p¼ÆÂI
 function ckfloat(value)
 {
 	var NumChr = "0123456789.";
@@ -33,7 +33,7 @@ function ckfloat(value)
 	return false;
 }
 
-//åˆ¤æ–·æ˜¯å¦ æœ‰ä¸åˆæ³•å­—å…ƒ
+//§PÂ_¬O§_ ¦³¤£¦Xªk¦r¤¸
 function chk_fldV(p_id)
 {
 	var score_i=0,score_c=0;
@@ -57,7 +57,7 @@ function chk_fldV(p_id)
 	}
 }
 
-//åˆ¤æ–·æ˜¯å¦ ç‚ºæ•¸å€¼
+//§PÂ_¬O§_ ¬°¼Æ­È
 function chk_numV( p_str , p_value )
 {
 	var checkOK = p_value;
@@ -86,7 +86,7 @@ function chk_numV( p_str , p_value )
 	}
 }
 
-//åˆ¤æ–·æ˜¯å¦ç‚ºæ—¥æœŸæ ¼å¼
+//§PÂ_¬O§_¬°¤é´Á®æ¦¡
 function dateV(p_year, p_month, p_day)
 {
 	var l_LegalDay = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
@@ -105,7 +105,7 @@ function dateV(p_year, p_month, p_day)
 	return true;
 }
 
-/*åˆ¤æ–·æ—¥æœŸå¤§å°æ˜¯å¦æœ‰ç¬¦åˆ*/
+/*§PÂ_¤é´Á¤j¤p¬O§_¦³²Å¦X*/
 function cktime(year1 , month1 , day1 , year2 , month2 , day2)
 {	
 	var year1	= parseInt(year1);
@@ -139,7 +139,7 @@ function cktime(year1 , month1 , day1 , year2 , month2 , day2)
 	}
 }
 
-//åˆ¤æ–·E-Mailæ ¼å¼
+//§PÂ_E-Mail®æ¦¡
 function chk_mailV(p_str){
 	var checkStr = p_str;
 	for (i = 0;  i < checkStr.length;  i++)        
@@ -149,7 +149,7 @@ function chk_mailV(p_str){
 	return false;
 }
 
-//åˆ¤æ–·å­—æ•¸æ˜¯å¦æœ‰è¶…é
+//§PÂ_¦r¼Æ¬O§_¦³¶W¹L
 function chk_Total(p_str , p_value)
 {
 	var count = 0;
@@ -172,7 +172,7 @@ function chk_Total(p_str , p_value)
 	}
 }
 
-/*åˆ¤æ–·æ—¥æœŸæ˜¯å¦æ­£ç¢º*/
+/*§PÂ_¤é´Á¬O§_¥¿½T*/
 function checkDate(year , month , day)
 {
 	year = parseInt(year);
@@ -248,7 +248,7 @@ function change_value(sid, newValue)
 	document.getElementById(sid).value = newValue;
 }
 
-//åˆ¤æ–·å°æ•¸é»å–åˆ°ç¬¬å¹¾ä½num å°æ•¸, poså–åˆ°ç¬¬å¹¾ä½
+//§PÂ_¤p¼ÆÂI¨ú¨ì²Ä´X¦ìnum ¤p¼Æ, pos¨ú¨ì²Ä´X¦ì
 function formatFloat(num, pos)   
 {   
 	var size = Math.pow(10, pos);   
@@ -266,7 +266,7 @@ function round1(value, rank)
 }
 
 
-//åŠ å…¥æˆ‘çš„æœ€æ„›
+//¥[¤J§Úªº³Ì·R
 function addBookmarkForBrowser(url, title)   
 {
 	if (document.all){
@@ -276,13 +276,13 @@ function addBookmarkForBrowser(url, title)
 	}
 }
 
-//é€å‡ºè¡¨å–®
+//°e¥Xªí³æ
 function form_submit(form_name)
 {
 	document.getElementById(form_name).submit();
 }
 
-//ç”¢ç”Ÿäº‚æ•¸Minæœ€å°å€¼ Maxæœ€å¤§å€¼
+//²£¥Í¶Ã¼ÆMin³Ì¤p­È Max³Ì¤j­È
 function get_random(Min, Max)
 {
 	return (Math.floor(Math.random() * (Max - Min + 1)) + Min);  
@@ -293,12 +293,12 @@ function check_login()
 	var obj = document.loginform;
 	if ( trim(obj.username.value) == '' )
 	{
-		alert('è«‹è¼¸å…¥å¸³è™Ÿ!!');
+		alert('½Ğ¿é¤J±b¸¹!!');
 		obj.username.focus();
 	
 	}else if ( trim(obj.password.value) == '' )
 	{
-		alert('è«‹è¼¸å…¥å¯†ç¢¼!!');
+		alert('½Ğ¿é¤J±K½X!!');
 		obj.password.focus();
 	
 	}else{
@@ -316,14 +316,14 @@ function ckhealth(inputId, min, max)
 		return false;
 	}else if (ckfloat(inputV))
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		document.getElementById(inputId).focus();
 		document.getElementById(inputId).style.border  = '1px solid #7F9DB9';
 		document.getElementById(inputId).style.height  = '22px';
 	}else{
 		if ( inputV < min || inputV > max)
 		{
-			//alert('è¶…éæ¨™æº–å€¼äº†ï¼Œæ¨™æº–å€¼ç‚º' + min + '~' + max + '!!');
+			//alert('¶W¹L¼Ğ·Ç­È¤F¡A¼Ğ·Ç­È¬°' + min + '~' + max + '!!');
 			document.getElementById(inputId).style.border  = '2px solid #FA0300';
 			document.getElementById(inputId).style.height  = '22px';
 		}else{
@@ -344,7 +344,7 @@ function ckhealth2(inputId, sex, Mmin, Mmax, Fmin, Fmax)
 		return false;
 	}else if (ckfloat(inputV))
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		document.getElementById(inputId).focus();
 		document.getElementById(inputId).style.border  = '1px solid #7F9DB9';
 		document.getElementById(inputId).style.height  = '22px';
@@ -353,7 +353,7 @@ function ckhealth2(inputId, sex, Mmin, Mmax, Fmin, Fmax)
 		{
 			if ( inputV < Mmin || inputV > Mmax)
 			{
-			alert('è¶…éæ¨™æº–å€¼äº†ï¼Œæ¨™æº–å€¼ç‚º' + Mmin + '~' + Mmax + '!!');
+			alert('¶W¹L¼Ğ·Ç­È¤F¡A¼Ğ·Ç­È¬°' + Mmin + '~' + Mmax + '!!');
 			document.getElementById(inputId).style.border  = '2px solid #FA0300';
 			document.getElementById(inputId).style.height  = '22px';
 			}else{
@@ -363,7 +363,7 @@ function ckhealth2(inputId, sex, Mmin, Mmax, Fmin, Fmax)
 		}else{
 			if ( inputV < Fmin || inputV > Fmax)
 			{
-			alert('è¶…éæ¨™æº–å€¼äº†ï¼Œæ¨™æº–å€¼ç‚º' + Fmin + '~' + Fmax + '!!');
+			alert('¶W¹L¼Ğ·Ç­È¤F¡A¼Ğ·Ç­È¬°' + Fmin + '~' + Fmax + '!!');
 			document.getElementById(inputId).style.border  = '2px solid #FA0300';
 			document.getElementById(inputId).style.height  = '22px';
 			}else{
@@ -392,10 +392,10 @@ function view_food(food, percent)
 function cksearch()
 {
 	var obj = document.searchform;
-	if ( trim(obj.keyword.value) == '' || trim(obj.keyword.value) == 'è«‹è¼¸å…¥é£Ÿç‰©åç¨±' )
+	if ( trim(obj.keyword.value) == '' || trim(obj.keyword.value) == '½Ğ¿é¤J­¹ª«¦WºÙ' )
 	{
 		obj.keyword.value = '';
-		alertify.alert("è«‹è¼¸å…¥æŸ¥è©¢é—œéµå­—!!");
+		alertify.alert("½Ğ¿é¤J¬d¸ßÃöÁä¦r!!");
 		obj.keyword.focus();
 	}else{
 		obj.submit();
@@ -407,7 +407,7 @@ function cksearchplate()
 	var obj = document.searchplateform;
 	if ( !dateV(obj.year.value,obj.month.value,obj.day.value) )
 	{
-		alert('è«‹é¸æ“‡æ­£ç¢ºçš„æ™‚é–“!!');
+		alert('½Ğ¿ï¾Ü¥¿½Tªº®É¶¡!!');
 		obj.day.focus();
 	}else{
 		obj.submit();
@@ -419,7 +419,7 @@ function clear_value(inpnut_id)
 	document.getElementById(inpnut_id).value = '';
 }
 
-//ç§€å‡ºè¡€æ¶²é€æ(HD)ã€è…¹è†œé€æ(CAPD)
+//¨q¥X¦å²G³zªR(HD)¡B¸¡½¤³zªR(CAPD)
 function show_kidney(no)
 {
 	if ( no == true)
@@ -435,77 +435,77 @@ function check_int()
 	var obj = document.form1;
 	if ( trim(obj.creatinine.value) != '' && ckfloat(obj.creatinine.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.creatinine.focus();
 	
 	}else if ( trim(obj.na.value) != '' && ckfloat(obj.na.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.na.focus();
 	
 	}else if ( trim(obj.fasting_sugar.value) != '' && ckfloat(obj.fasting_sugar.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.fasting_sugar.focus();
 	
 	}else if ( trim(obj.kk.value) != '' && ckfloat(obj.kk.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.kk.focus();
 	
 	}else if ( trim(obj.hba1c.value) != '' && ckfloat(obj.hba1c.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.hba1c.focus();
 	
 	}else if ( trim(obj.pp.value) != '' && ckfloat(obj.pp.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.pp.focus();
 	
 	}else if ( trim(obj.hgb.value) != '' && ckfloat(obj.hgb.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.hgb.focus();
 	
 	}else if ( trim(obj.ca.value) != '' && ckfloat(obj.ca.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.ca.focus();
 	
 	}else if ( trim(obj.hct.value) != '' && ckfloat(obj.hct.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.hct.focus();
 	
 	}else if ( trim(obj.fe.value) != '' && ckfloat(obj.fe.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.fe.focus();
 	
 	}else if ( trim(obj.tibc.value) != '' && ckfloat(obj.tibc.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.tibc.focus();
 	
 	}else if ( trim(obj.ua.value) != '' && ckfloat(obj.ua.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.ua.focus();
 	
 	}else if ( trim(obj.ferritin.value) != '' && ckfloat(obj.ferritin.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.ferritin.focus();
 	
 	}else if ( trim(obj.cholesterol.value) != '' && ckfloat(obj.cholesterol.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.cholesterol.focus();
 	
 	}else if ( trim(obj.triglyceride.value) != '' && ckfloat(obj.triglyceride.value) )
 	{
-		alert('è«‹è¼¸å…¥åŠå½¢æ•¸å­—æˆ–å°æ•¸é»!!');
+		alert('½Ğ¿é¤J¥b§Î¼Æ¦r©Î¤p¼ÆÂI!!');
 		obj.triglyceride.focus();
 	
 	}else{
@@ -513,7 +513,7 @@ function check_int()
 	}
 }
 
-//åˆ¤æ–·E-Mailæ ¼å¼
+//§PÂ_E-Mail®æ¦¡
 function ckEmail(email)
 {	
 	var pattern = /^([a-zA-Z0-9\._-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;

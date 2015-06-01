@@ -55,8 +55,6 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-	<?php
-	require_once "login.php";
-	?>
+
 	<style type="text/css">body { padding-top: 60px; }</style>
 
