@@ -31,6 +31,23 @@ header_print(true);   //載入header檔
 	<!--中間的-->
 	<div class="col-md-6 col-sm-8">
 		<div class="row">
+		<div class="panel panel-primary">
+		  <div class="panel-heading">
+			<h3 class="panel-title">查詢</h3>
+		  </div>
+		  <div class="panel-body">
+			<form action = '" . ROOT_URL . "/food.php' method = 'post' id = 'searchform' name = 'searchform'>
+			<div class="row">
+				<div class="col-md-8">
+				<input type = 'text' id = 'keyword' class="form-control input-sm" name = 'keyword' placeholder="請輸入食物名稱" onclick = 'this.value = ""'>
+				</div>
+				<div class="col-md-4">
+				<a href="javascript:cksearch1()" type="button" class="btn btn-success btn-sm active" role="button">搜尋</a>
+				</div>
+			</div>
+			</form>
+		  </div>
+		</div>		
 		<div class="panel panel-success">
 		  <div class="panel-heading">
 			<h3 class="panel-title">食物列表</h3>

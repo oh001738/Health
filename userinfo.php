@@ -33,7 +33,7 @@ $step = ($_GET['step'])? $_GET['step'] : $step;
 			<?php	
 				//今日配餐紀錄			
 				echo "<div class=\"row\"><!--今日配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12\">\n"; 
+				echo "<div class=\"col-md-12 hidden-xs\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 
@@ -81,7 +81,7 @@ $step = ($_GET['step'])? $_GET['step'] : $step;
 			<?php
 				//我的配餐紀錄
 				echo "<div class=\"row\"><!--我的配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12\">\n"; 
+				echo "<div class=\"col-md-12 hidden-xs\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 

@@ -20,4 +20,5 @@
 		<link href="<?PHP echo ROOT_URL;?>/css/alertify.core.css" rel="stylesheet">
 		<link href="<?PHP echo ROOT_URL;?>/css/alertify.default.css" rel="stylesheet">
 		<script src="<?PHP echo ROOT_URL;?>/js/alertify.js"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>

@@ -26,39 +26,44 @@
 			?>			
 			</div>
 		</div>
-	<!--查詢-->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-primary">
-				  <div class="panel-heading">
-					<h3 class="panel-title">查詢</h3>
-				  </div>
-				  <div class="panel-body">
-					<?PHP
-						if ( trim($_GET['percent']) != '' && trim($_GET['meal']) != '' && trim($_GET['rand']) != '' )
-						{
-							echo "<form action = '" . ROOT_URL . "/rootstalk.php?percent=" . $_GET['percent'] . "&meal=" . $_GET['meal'] . "&rand=" . $_GET['rand'] . "' method = 'post' id = 'searchform' name = 'searchform'>\n";
-						}else{
-							echo "<form action = '" . ROOT_URL . "/food.php' method = 'post' id = 'searchform' name = 'searchform'>\n";
-						}
-					?>
-					<div class="row">
-						<div class="col-md-8">
-						<input type = 'text' id = 'keyword' class="form-control input-sm" name = 'keyword' placeholder="請輸入食物名稱" onclick = 'this.value = ""'>
-						</div>
-						<div class="col-md-4">
-						<a href="javascript:cksearch()" type="button" class="btn btn-success btn-sm active" role="button">搜尋</a>
-						</div>
-					</div>
-					</form>
-				  </div>
-				</div>
-			</div>
-		</div><!--查詢 Box Section-->	
-		
+		<?php
+		if (basename($_SERVER['PHP_SELF'])=='food.php')
+		{
+		echo "";
+		}
+		else 
+		{
+		echo "<div class=\"row\">\n"; 
+		echo "<div class=\"col-md-12\">\n"; 
+		echo "<div class=\"panel panel-primary\">\n"; 
+		echo "<div class=\"panel-heading\">\n"; 
+		echo "<h3 class=\"panel-title\">查詢</h3>\n"; 
+		echo "</div>\n"; 
+		echo "<div class=\"panel-body\">\n";
+		if ( trim($_GET['percent']) != '' && trim($_GET['meal']) != '' && trim($_GET['rand']) != '' )
+		{
+		echo "<form action = '" . ROOT_URL . "/rootstalk.php?percent=" . $_GET['percent'] . "&meal=" . $_GET['meal'] . "&rand=" . $_GET['rand'] . "' method = 'post' id = 'searchform' name = 'searchform'>\n";
+		}else{
+		echo "<form action = '" . ROOT_URL . "/food.php' method = 'post' id = 'searchform' name = 'searchform'>\n";
+		}
+		echo "<div class=\"row\">\n"; 
+		echo "<div class=\"col-md-8\">\n"; 
+		echo "<input type = 'text' id = 'keyword' class=\"form-control input-sm\" name = 'keyword' placeholder=\"請輸入食物名稱\" onclick = 'this.value = \"\"'>\n"; 
+		echo "</div>\n"; 
+		echo "<div class=\"col-md-4\">\n"; 
+		echo "<a href=\"javascript:cksearch()\" type=\"button\" class=\"btn btn-success btn-sm active\" role=\"button\">搜尋</a>\n"; 
+		echo "</div>\n"; 
+		echo "</div>\n"; 
+		echo "</form>\n"; 
+		echo "</div>\n"; 
+		echo "</div>\n"; 
+		echo "</div>\n"; 
+		echo "</div><!--查詢 Box Section-->	\n";
+		}?>
+
 	<!--個人餐盤-->	
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 col-xs-6">
 			<?PHP
 				echo "<div class=\"panel panel-primary\">\n";
 				echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">個人餐盤</h3></div>\n";
@@ -109,15 +114,14 @@
 				echo "總和：" . $carTotal . "\n";
 				echo "</div>\n";
 				echo "</div>\n";				
-				echo "<div class=\"panel-footer\">".dishes()."<h5>檢視餐盤</h5></a></div>";
+				echo "<div class=\"panel-footer\">".dishes()."<h5>送出飲食記錄</h5></a></div>";
 				echo "</div>\n";
 				}
-				echo "</div>\n";
+				//echo "</div>\n";
 				?>			
 		</div><!--個人餐盤 Box Section-->
 	<!--所需熱量-->
-		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12 col-xs-6">
 			<?PHP include_once 'needcal.php';?>
 			</div>
 		</div><!--所需熱量 Box Section-->
@@ -144,6 +148,10 @@
 					<div class="row">					
 						<div class="col-md-8">總計會員人數：</div>
 						<div class="col-md-4"><?PHP echo $counter['user_total'];?></div>
+					</div>
+					<div class="row">					
+						<div class="col-md-5">IP位置:</div>
+						<div class="col-md-7"><?PHP echo $_SERVER['REMOTE_ADDR'];?></div>
 					</div>
 				  </div>
 				</div>

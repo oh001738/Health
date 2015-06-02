@@ -154,7 +154,7 @@ header_print(true);   //載入header檔
 	
 				//未確認配餐紀錄			
 				echo "<div class=\"row\"><!--未確認配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12\">\n"; 
+				echo "<div class=\"col-md-12 col-xs-6\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 
@@ -187,7 +187,7 @@ header_print(true);   //載入header檔
 					echo "</div>\n";
 					echo "</div>\n";
 					echo "</div>\n";
-					echo "</div>\n";					
+					//echo "</div>\n";					
 				}
 				else
 				{
@@ -196,15 +196,15 @@ header_print(true);   //載入header檔
 					echo "</div>\n";
 					echo "</div>\n";
 					echo "</div>\n";
-					echo "</div>\n";
+					//echo "</div>\n";
 				}
 				?>
 				
 				
 				<?php
 				//我的配餐紀錄
-				echo "<div class=\"row\"><!--我的配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12\">\n"; 
+				//echo "<div class=\"row\"><!--我的配餐記錄-->\n"; 
+				echo "<div class=\"col-md-12 col-xs-6\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 
@@ -246,6 +246,7 @@ header_print(true);   //載入header檔
 		</div>
 		<!--右邊的-->
 		<div class="col-md-3 hidden-sm hidden-xs">
+		<div class="row">
 		<?PHP include_once "right_menu.php";?>
 		</div>
 		</div>
