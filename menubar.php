@@ -15,17 +15,6 @@
             <li><a href="<?PHP echo ROOT_URL;?>/kfoodroot.php"><i class="fa fa-pencil-square-o"></i>飲食記錄</a></li>
             <li><a href="<?PHP echo ROOT_URL;?>/history.php"><i class="fa fa-search"></i>查詢飲食記錄</a></li>
 			<li><a href="<?PHP echo ROOT_URL;?>/food.php"><i class="fa fa-flask"></i>營養資料庫查詢</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-book"></i>保健專區<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">            
-                <li><a href="<?PHP echo ROOT_URL;?>/knowledge.php">健康知識</a></li>
-                <li><a href="">預留區域</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">使用者回饋</li>
-		<li><a href="<?PHP echo ROOT_URL;?>/webintro.php">使用說明</a></li>
-		<li><a href="<?PHP echo ROOT_URL;?>/gbook00.php">留言板</a></li>
-              </ul>
-            </li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
 	<?PHP

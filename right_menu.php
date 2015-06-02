@@ -27,9 +27,8 @@
 			</div>
 		</div>
 		<?php
-		if (basename($_SERVER['PHP_SELF'])=='food.php')
+		if (basename($_SERVER['PHP_SELF'])=='food.php' || basename($_SERVER['PHP_SELF'])=='rootstalk.php')
 		{
-		echo "";
 		}
 		else 
 		{
@@ -61,10 +60,41 @@
 		echo "</div><!--查詢 Box Section-->	\n";
 		}?>
 
+
 	<!--個人餐盤-->	
 		<div class="row">
-			<div class="col-md-12 col-xs-6">
+		<div class="col-md-12 col-xs-6">
 			<?PHP
+			if (basename(basename($_SERVER['PHP_SELF'])=='rootstalk.php'))
+			{}
+			else{
+			function dishes()
+			{
+				if ( countSQL('guest_food', 'id', "WHERE session_id = '" . session_id() . "'") > 0 )
+						{
+							$sql = "SELECT rand, percent, meal, flag FROM guest_food WHERE session_id = '" . session_id() . "'";
+							$result = mysql_query($sql);
+							while ( $row = mysql_fetch_array($result) )
+							{
+								$logPlate[$row['rand']]['percent'] = $row['percent']; //份量
+								$logPlate[$row['rand']]['meal']    = $row['meal'];    //餐別
+								$logPlate[$row['rand']]['flag']    = $row['flag'];    //判斷是否已送出
+							}
+
+							foreach ( $logPlate as $key => $value )
+							{
+								$percent = ($logPlate[$key]['percent'] == 1)? '1' : "1/" . $logPlate[$key]['percent'];
+								if ($logPlate[$key]['flag'] == 1)
+								{
+									$dish = "<a href = '" . ROOT_URL . "/save_plate.php?percent=" . $logPlate[$key]['percent'] . "&meal=" . $logPlate[$key]['meal'] . "'>";
+								}else
+								{
+									$dish = "<a href = '" . ROOT_URL . "/food_plate.php?percent=" . $logPlate[$key]['percent'] . "&meal=" . $logPlate[$key]['meal'] . "&rand=" . $key . "'>" ;
+								}
+							}
+						}
+						return $dish;
+			}
 				echo "<div class=\"panel panel-primary\">\n";
 				echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">個人餐盤</h3></div>\n";
 				echo "<div class=\"panel-body\">\n";
@@ -80,13 +110,13 @@
 					echo "</div>\n";
 				}else{
 					echo "<div class=\"col-md-5 col-xs-5\">\n";
-					echo "食物名稱\n";
+					echo "<b>名稱</b>\n";
 					echo "</div>\n";
 					echo "<div class=\"col-md-3 col-xs-3\">\n";
-					echo "Qty\n";
+					echo "<b>Qty</b>\n";
 					echo "</div>\n";
 					echo "<div class=\"col-md-4 col-xs-4\">\n";
-					echo "熱量\n";
+					echo "<b>熱量</b>\n";
 					echo "</div>\n";
 					echo "</div>\n";					
 					foreach ($food as $key => $value)
@@ -101,7 +131,7 @@
 						echo "<a href = 'javascript:view_food(" . $value['food_id'] . ")' title = '" . $food_name . "'>" . $foodN . "</a>\n";
 						echo "</div>\n";
 						echo "<div class=\"col-md-3 col-xs-3\">\n";
-						echo "x " . $value['portion'] . "\n";
+						echo "" . $value['portion'] . "\n";
 						echo "</div>\n";
 						echo "<div class=\"col-md-4 col-xs-4\">\n";
 						echo "" . $value['cal'] . "\n";
@@ -111,15 +141,15 @@
 					echo "</div>\n";
 				echo "<div class=\"row\">\n";
 				echo "<div class=\"col-md-12\">\n";
-				echo "總和：" . $carTotal . "\n";
+				echo "<b>熱量總和：" . $carTotal . "</b>\n";
 				echo "</div>\n";
 				echo "</div>\n";				
 				echo "<div class=\"panel-footer\">".dishes()."<h5>送出飲食記錄</h5></a></div>";
 				echo "</div>\n";
-				}
+				}}
 				//echo "</div>\n";
 				?>			
-		</div><!--個人餐盤 Box Section-->
+		</div><!--個人餐盤 Box Section-->					
 	<!--所需熱量-->
 			<div class="col-md-12 col-xs-6">
 			<?PHP include_once 'needcal.php';?>
@@ -158,33 +188,11 @@
 			</div>
 		</div><!--連線資訊 Box Section-->	
 	</div><!--Total Box Size -->
-</div><!--Total Row Section -->	
+</div><!--Total Row Section -->
 <?php
-function dishes()
+if (basename(basename($_SERVER['PHP_SELF'])=='rootstalk.php'))
 {
-	if ( countSQL('guest_food', 'id', "WHERE session_id = '" . session_id() . "'") > 0 )
-			{
-				$sql = "SELECT rand, percent, meal, flag FROM guest_food WHERE session_id = '" . session_id() . "'";
-				$result = mysql_query($sql);
-				while ( $row = mysql_fetch_array($result) )
-				{
-					$logPlate[$row['rand']]['percent'] = $row['percent']; //份量
-					$logPlate[$row['rand']]['meal']    = $row['meal'];    //餐別
-					$logPlate[$row['rand']]['flag']    = $row['flag'];    //判斷是否已送出
-				}
-
-				foreach ( $logPlate as $key => $value )
-				{
-					$percent = ($logPlate[$key]['percent'] == 1)? '1' : "1/" . $logPlate[$key]['percent'];
-					if ($logPlate[$key]['flag'] == 1)
-					{
-						$dish = "<a href = '" . ROOT_URL . "/save_plate.php?percent=" . $logPlate[$key]['percent'] . "&meal=" . $logPlate[$key]['meal'] . "'>";
-					}else
-					{
-						$dish = "<a href = '" . ROOT_URL . "/food_plate.php?percent=" . $logPlate[$key]['percent'] . "&meal=" . $logPlate[$key]['meal'] . "&rand=" . $key . "'>" ;
-					}
-				}
-			}
-			return $dish;
 }
-?>
+else{
+}
+?>	

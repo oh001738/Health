@@ -154,7 +154,7 @@ header_print(true);   //載入header檔
 	
 				//未確認配餐紀錄			
 				echo "<div class=\"row\"><!--未確認配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12 col-xs-6\">\n"; 
+				echo "<div class=\"col-md-12 hidden-xs\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 
@@ -204,7 +204,7 @@ header_print(true);   //載入header檔
 				<?php
 				//我的配餐紀錄
 				//echo "<div class=\"row\"><!--我的配餐記錄-->\n"; 
-				echo "<div class=\"col-md-12 col-xs-6\">\n"; 
+				echo "<div class=\"col-md-12 hidden-xs\">\n"; 
 				echo "<div class=\"row\">\n"; 
 				echo "<div class=\"panel panel-success\">\n"; 
 				echo "<div class=\"panel-heading\">\n"; 

@@ -181,11 +181,12 @@ function delimg_plate()
 					<h3 class="panel-title">食物列表</h3>
 				</div>
 				<div class="panel-body">
-				<div class="table-responsive">
-				<table border = '0' cellpadding = '0' cellspacing = '0' width = '100%'>
+				<div class="table-condensed">
+				<table class="table">
+				<thead>
 				<tr>
 					<td valign = 'top' align = 'center' style = 'padding:0 0 10 0'>
-					<table border = '0' cellpadding = '2' cellspacing = '2' width = '95%'>
+					<table border = '0' cellpadding = '1' cellspacing = '1' width = '95%'>
 					<form action = '<?PHP echo getenv("REQUEST_URI");?>' id = 'plate' name = 'plate' method = 'post' enctype = 'multipart/form-data'>
 					<tr bgcolor = '#F0FFFF'>
 						<td></td>
@@ -195,7 +196,7 @@ function delimg_plate()
 						<td align = 'center'><font class = 'text13px'>膽固醇<br>mg</font></td>
 						<td align = 'center'><font class = 'text13px'>脂肪<br>g</font></td>
 						<td align = 'center'><font class = 'text13px'>蛋白質<br>g</font></td>
-						<td align = 'center'><font>醣類<br>g</font></td>
+						<td align = 'center'><font class = 'text13px'>醣類<br>g</font></td>
 						<?PHP
 						if ( trim($USER['username']) != '')   //判斷是否有登入會員，可看更多資料
 						{
@@ -210,6 +211,8 @@ function delimg_plate()
 						?>
 						<td width = '5%'></td>
 					</tr>
+					</thead>
+					<tbody>
 					<?PHP
 					$i = 0;
 					$sql = "SELECT * FROM guest_food WHERE session_id = '" . session_id() . "' AND flag = 0 AND rand = '" . $_GET['rand'] . "'";
@@ -417,27 +420,31 @@ function delimg_plate()
 					<table border = '0' cellpadding = '0' cellspacing = '0' width = '100%'>
 					<tr>	
 						<td align = 'right' class = 'text13px'>
-						<div style = 'padding-top:10px;padding-right:20px'>
-						<?PHP
-						if ($i > 0)
-						{
-							echo "	<span style = 'padding-right:10px'><input type = 'button' id = 'uploadsave' name = 'uploadsave' value = '重新計算熱量&圖片上傳' onclick = 'document.plate.submit();' style = 'width:160px;height:25px;'></span>\n";
-							echo "	<span style = 'padding-right:10px'><input type = 'button' id = 'checksave' name = 'checksave' value = '確認' onclick = 'finish();' style = 'width:40px;height:25px;'></span>\n";
-						}
-						?>
-						<span style = 'padding-right:10px'><input type = 'button' id = 'contorder' name = 'cont_order' value = '繼續點餐' onclick = 'location.href="<?PHP echo ROOT_URL;?>/rootstalk.php?class=food1&percent=<?PHP echo $_GET['percent'];?>&meal=<?PHP echo $_GET['meal'];?>&rand=<?PHP echo $_GET['rand'];?>"' style = 'width:100px;height:25px;'></span>				
-						</div>
+
 						</td>
 					</tr>
 					</table>
 					</td>
 				</tr>
+				</tbody>
 				</table>
+				
 				</div>
 				</div>
 			</div>		
 		</div>
-	</div>	
+		<div>
+		<?PHP
+		if ($i > 0)
+		{
+			echo "	<span><input type = 'button' class = 'btn btn-warning' id = 'uploadsave' name = 'uploadsave' value = '重新計算熱量&圖片上傳' onclick = 'document.plate.submit();'></span>\n";
+			echo "	<span><input type = 'button' class = 'btn btn-primary' id = 'checksave' name = 'checksave' value = '確認' onclick = 'finish();' ></span>\n";
+		}
+		?>
+		<span><input type = 'button' class = 'btn btn-success' id = 'contorder' name = 'cont_order' value = '繼續點餐' onclick = 'location.href="<?PHP echo ROOT_URL;?>/rootstalk.php?class=food1&percent=<?PHP echo $_GET['percent'];?>&meal=<?PHP echo $_GET['meal'];?>&rand=<?PHP echo $_GET['rand'];?>"'></span>				
+		</div>	
+	</div><!--Center-->
+
     </div> <!-- /container -->
 	<form action = '<?PHP echo getenv("REQUEST_URI");?>' id = 'delimgform' name = 'delimgform' method = 'post'>
 	<input type = 'hidden' id = 'delimg' name = 'delimg' value = '<?PHP echo base64_encode($images);?>'>

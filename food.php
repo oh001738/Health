@@ -36,7 +36,9 @@ header_print(true);   //載入header檔
 			<h3 class="panel-title">查詢</h3>
 		  </div>
 		  <div class="panel-body">
-			<form action = '" . ROOT_URL . "/food.php' method = 'post' id = 'searchform' name = 'searchform'>
+			<?php
+			echo "<form action = '" . ROOT_URL . "/food.php' method = 'post' id = 'searchform' name = 'searchform'>\n";
+			?>
 			<div class="row">
 				<div class="col-md-8">
 				<input type = 'text' id = 'keyword' class="form-control input-sm" name = 'keyword' placeholder="請輸入食物名稱" onclick = 'this.value = ""'>
