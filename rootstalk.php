@@ -75,7 +75,7 @@ function MM_goToURL() { //v3.0
 				<input type = 'text' id = 'keyword' class="form-control input-sm" name = 'keyword' placeholder="請輸入食物名稱" onclick = 'this.value = ""'>
 				</div>
 				<div class="col-md-4">
-				<a href="javascript:cksearch1()" type="button" class="btn btn-success btn-sm active" role="button">搜尋</a>
+				<a href="javascript:cksearch()" type="button" class="btn btn-success btn-sm active" role="button">搜尋</a>
 				</div>
 			</div>
 			</form>
