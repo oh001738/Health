@@ -61,7 +61,7 @@ function MM_goToURL() { //v3.0
 			?>
 		</div>
 		<!--搜尋列-->
-		<div class="col-md-12 col-xs-6">		
+		<div class="col-md-12 col-sm-12 col-xs-6">		
 		<div class="panel panel-primary">
 		  <div class="panel-heading">
 			<h3 class="panel-title">查詢</h3>
@@ -82,7 +82,8 @@ function MM_goToURL() { //v3.0
 		  </div>
 		</div>
 		</div><!--搜尋列-->
-		<div class="col-md-12 col-xs-6">
+		
+		<div class="col-md-12 col-sm-12 col-xs-6">
 			<?PHP
 				echo "<div class=\"panel panel-primary\">\n";
 				echo "<div class=\"panel-heading\"><h3 class=\"panel-title\">個人餐盤</h3></div>\n";
@@ -139,7 +140,7 @@ function MM_goToURL() { //v3.0
 				//echo "</div>\n";
 				?>			
 		</div><!--個人餐盤 Box Section-->		
-		<div class="col-md-12 hidden-xs"><!--配餐-->			
+		<div class="col-md-12 col-sm-12 hidden-xs"><!--配餐-->			
 				<div class="panel panel-success">
 					<div class="panel-heading">
 						<h3 class="panel-title">配餐</h3>

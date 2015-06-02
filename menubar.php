@@ -29,7 +29,7 @@
 
 				}else if ($USER['power'] == '2' || $USER['power'] == '3')
 				{
-				echo "<li><a href = '" . ROOT_URL . "/adminlte/index.php'><i class=\"fa fa-server\"></i>醫療人員管理</a></li>\n";
+				echo "<li><a href = '" . ROOT_URL . "/adminlte/index.php'><i class=\"fa fa-server\"></i>後台管理</a></li>\n";
 				}
 			}
 			echo "<li><a href = '" . ROOT_URL . "/logout.php'><i class=\"fa fa-sign-out\"></i>登出</a></li>\n";
