@@ -183,7 +183,6 @@ function delimg_plate()
 				<div class="panel-body">
 				<div class="table-condensed">
 				<table class="table">
-				<thead>
 				<tr>
 					<td valign = 'top' align = 'center' style = 'padding:0 0 10 0'>
 					<table border = '0' cellpadding = '1' cellspacing = '1' width = '95%'>
@@ -211,8 +210,7 @@ function delimg_plate()
 						?>
 						<td width = '5%'></td>
 					</tr>
-					</thead>
-					<tbody>
+
 					<?PHP
 					$i = 0;
 					$sql = "SELECT * FROM guest_food WHERE session_id = '" . session_id() . "' AND flag = 0 AND rand = '" . $_GET['rand'] . "'";
@@ -426,7 +424,6 @@ function delimg_plate()
 					</table>
 					</td>
 				</tr>
-				</tbody>
 				</table>
 				
 				</div>
