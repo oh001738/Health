@@ -17,8 +17,8 @@
 		<script src="<?PHP echo ROOT_URL;?>/js/bootstrap.min.js"></script>
 		<script src="<?PHP echo ROOT_URL;?>/js/float-login.js"></script>
 		<link href="<?PHP echo ROOT_URL;?>/css/float-login.css" rel="stylesheet">
-		<link href="<?PHP echo ROOT_URL;?>/css/alertify.core.css" rel="stylesheet">
-		<link href="<?PHP echo ROOT_URL;?>/css/alertify.default.css" rel="stylesheet">
-		<script src="<?PHP echo ROOT_URL;?>/js/alertify.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.core.css" rel="stylesheet">  
+		<link href="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.default.css" rel="stylesheet">  
+		<script src="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>  
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>

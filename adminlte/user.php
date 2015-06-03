@@ -855,6 +855,7 @@ elseif ( $op == 'user' )
 			//if($USER['location']==$row['location'])			
 			{
         		echo "  <tr>\n";
+				echo "  <td>" . $row['id'] . "</td>\n";
      		   	echo "  <td>" . $row['username'] . "</td>\n";
         		echo "  <td>" . $row['c_name'] . "</td>\n";
         		echo "  <td>" . $row['e_name'] . "</td>\n";			

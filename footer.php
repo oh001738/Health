@@ -12,7 +12,7 @@
 	</td>
 </tr>
 <tr>
-	<td class = 'allright'><div style = 'padding-left:95px;padding-top:5px;padding-bottom:5px'><font style = 'color:#FFCC00'>NTUH</font> &copy; All rights reserved.</div></td>
+	<td class = 'allright'><div style = 'padding-left:95px;padding-top:5px;padding-bottom:5px'><font style = 'color:#FFCC00'>THUIM</font> &copy; All rights reserved.</div></td>
 </tr>
 </table>
 </body>

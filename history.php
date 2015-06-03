@@ -1,5 +1,5 @@
 <?PHP
-include "config.php";
+include_once "config.php";
 
 header_print(true);   //載入header檔
 

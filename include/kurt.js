@@ -386,7 +386,7 @@ function show_display(sid)
 
 function view_food(food, percent)
 {
-	window.open('contact_food.php?food_id=' + food + '&percent=' + percent,'','height=550,width=650,toolbar=no,scrollbars=yes,resizable=no,top=100,left=100');
+	window.open('contact_food.php?food_id=' + food + '&percent=' + percent,'','toolbar=no,scrollbars=yes,resizable=no,top=100,left=100');
 }
 
 function cksearch()
@@ -395,7 +395,7 @@ function cksearch()
 	if ( trim(obj.keyword.value) == '' || trim(obj.keyword.value) == '請輸入食物名稱' )
 	{
 		obj.keyword.value = '';
-		alertify.alert("請輸入查詢關鍵字!!");
+		alertify.error("請輸入查詢關鍵字!!");
 		obj.keyword.focus();
 	}else{
 		obj.submit();
@@ -407,7 +407,7 @@ function cksearch1()
 	if ( trim(obj.keyword.value) == '' || trim(obj.keyword.value) == '請輸入食物名稱' )
 	{
 		obj.keyword.value = '';
-		alertify.alert("請輸入查詢關鍵字!!");
+		alertify.error("請輸入查詢關鍵字!!");
 		obj.keyword.focus();
 	}else{
 		obj.submit();

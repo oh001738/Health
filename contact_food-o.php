@@ -143,6 +143,7 @@ if ( count($food_element_id) > 0 )
 </tr>
 </table>
 </div>
+
 <div style = 'padding-top:10px'><input type = 'button' id = 'close' name = 'close' value = '關閉視窗' onclick = 'window.close()'></div>
 </center>
 </body>

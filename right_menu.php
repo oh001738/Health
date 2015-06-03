@@ -144,7 +144,7 @@
 				echo "<b>熱量總和：" . $carTotal . "</b>\n";
 				echo "</div>\n";
 				echo "</div>\n";				
-				echo "<div class=\"panel-footer\">".dishes()."<h5>送出飲食記錄</h5></a></div>";
+				echo "<div class=\"panel-footer\">".dishes()."<h4><span class=\"label label-success\">送出飲食記錄</span></h4></a></div>";
 				echo "</div>\n";
 				}}
 				//echo "</div>\n";

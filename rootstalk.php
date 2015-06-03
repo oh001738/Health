@@ -134,7 +134,7 @@ function MM_goToURL() { //v3.0
 				echo "<b>熱量總和：" . $carTotal . "</b>\n";
 				echo "</div>\n";
 				echo "</div>\n";				
-				echo "<div class=\"panel-footer\">".dishes()."<h5>送出飲食記錄</h5></a></div>";
+				echo "<div class=\"panel-footer\">".dishes()."<h4><span class=\"label label-success\">送出飲食記錄</span></h4></a></div>";
 				echo "</div>\n";
 				}
 				//echo "</div>\n";
@@ -199,7 +199,7 @@ function MM_goToURL() { //v3.0
 								<table border = '0' cellpadding = '0' cellspacing = '0' width = '100%'>
 								<form action = 'search_plate.php?percent=<?PHP echo $_GET['percent'];?>&meal=<?PHP echo $_GET['meal'];?>&rand=<?PHP echo $_GET['rand'];?>' method = 'post' id = 'searchplateform' name = 'searchplateform'>
 								<tr>
-									<td class = 'text13px' align = 'right'>
+									<td class = 'text13px' align = 'center'>
 									<div style = 'padding-right:5px'>
 									<select id = 'year' name = 'year'>
 									<?PHP
